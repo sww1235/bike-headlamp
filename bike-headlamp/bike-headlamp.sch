@@ -108,8 +108,13 @@ U 1 1 584A888C
 P 4300 4100
 F 0 "SW2" H 4380 4210 50  0000 C CNN
 F 1 "BACK" H 4300 4050 50  0000 C CNN
-F 2 "" H 4300 4300 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS810" H 4300 4300 50  0001 C CNN
 F 3 "" H 4300 4300 50  0000 C CNN
+F 4 "125mA 125VAC; 100mA 50VDC, 500,000 Cycles at Full Load, 50mΩ Max. (Initial)" H 4300 4100 60  0001 C CNN "Characteristics"
+F 5 "E-Switch" H 4300 4100 60  0001 C CNN "Manufacturer"
+F 6 "Waterproof SPST Momentary pushbutton switch" H 4300 4100 60  0001 C CNN "Description"
+F 7 "RP8100B2M1CEBLKREDNIL" H 4300 4100 60  0001 C CNN "Package ID"
+F 8 "0.00@0" H 4300 4100 60  0001 C CNN "Pricing"
 	1    4300 4100
 	1    0    0    -1  
 $EndComp
@@ -120,13 +125,9 @@ Wire Wire Line
 Wire Wire Line
 	4650 4100 4450 4100
 Wire Wire Line
-	4150 4400 5500 4400
+	5900 4400 4150 4400
 Wire Wire Line
-	5500 4400 5900 4400
-Wire Wire Line
-	4150 3850 4150 4100
-Wire Wire Line
-	4150 4100 4150 4400
+	4150 4400 4150 3850
 Text Notes 7150 3750 0    60   ~ 0
 LED connectors are barrel jacks
 Text Notes 3750 3700 2    60   ~ 0
@@ -137,8 +138,13 @@ U 1 1 584CC69D
 P 4300 3850
 F 0 "SW1" H 4380 3960 50  0000 C CNN
 F 1 "FRONT" H 4300 3800 50  0000 C CNN
-F 2 "" H 4300 4050 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS810" H 4300 4050 50  0001 C CNN
 F 3 "" H 4300 4050 50  0000 C CNN
+F 4 "125mA 125VAC; 100mA 50VDC, 500,000 Cycles at Full Load, 50mΩ Max. (Initial)" H 4300 3850 60  0001 C CNN "Characteristics"
+F 5 "E-Switch" H 4300 3850 60  0001 C CNN "Manufacturer"
+F 6 "Waterproof SPST Momentary pushbutton switch" H 4300 3850 60  0001 C CNN "Description"
+F 7 "RP8100B2M1CEBLKWHTNIL" H 4300 3850 60  0001 C CNN "Package ID"
+F 8 "0.00@0" H 4300 3850 60  0001 C CNN "Pricing"
 	1    4300 3850
 	1    0    0    -1  
 $EndComp
@@ -151,8 +157,12 @@ U 1 1 59C3506A
 P 3550 3000
 F 0 "J1" H 3470 2375 50  0000 C CNN
 F 1 "HARNESS" H 3470 2466 50  0000 C CNN
-F 2 "" H 3550 3000 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3550 3000 50  0001 C CNN
 F 3 "" H 3550 3000 50  0001 C CNN
+F 4 "Amphenol LTW" H 3550 3000 60  0001 C CNN "Manufacturer"
+F 5 "Waterproof Circular Connector" H 3550 3000 60  0001 C CNN "Description"
+F 6 "BD-08RMMS-SC7001" H 3550 3000 60  0001 C CNN "Package ID"
+F 7 "0.00@0" H 3550 3000 60  0001 C CNN "Pricing"
 	1    3550 3000
 	-1   0    0    1   
 $EndComp
@@ -167,7 +177,7 @@ U 1 1 59C35455
 P 6550 2850
 F 0 "U2" H 6450 2650 60  0000 C CNN
 F 1 "MiniPuck" H 6625 3091 60  0000 C CNN
-F 2 "" H 6350 2550 60  0001 C CNN
+F 2 "SW-LEDdynamics:MiniPuck-Pinned" H 6350 2550 60  0001 C CNN
 F 3 "" H 6450 2650 60  0001 C CNN
 F 4 "0.00@0" H 6600 3450 60  0001 C CNN "Pricing"
 F 5 "LED constant current driver" H 6750 3350 60  0001 C CNN "Description"
@@ -181,7 +191,7 @@ U 1 1 59C35563
 P 6550 3400
 F 0 "U3" H 6450 3200 60  0000 C CNN
 F 1 "MiniPuck" H 6625 3641 60  0000 C CNN
-F 2 "" H 6350 3100 60  0001 C CNN
+F 2 "SW-LEDdynamics:MiniPuck-Pinned" H 6350 3100 60  0001 C CNN
 F 3 "" H 6450 3200 60  0001 C CNN
 F 4 "0.00@0" H 6600 4000 60  0001 C CNN "Pricing"
 F 5 "LED constant current driver" H 6750 3900 60  0001 C CNN "Description"
@@ -200,9 +210,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 3400 5900 3400
 Wire Wire Line
-	5900 4400 5900 3400
-Wire Wire Line
-	5900 3400 5900 2850
+	5900 2850 5900 4400
 Wire Wire Line
 	5900 2850 6200 2850
 Connection ~ 5900 3400
@@ -269,9 +277,7 @@ F 3 "" H 5550 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 2550 5550 2600
-Wire Wire Line
-	5550 2600 5550 2650
+	5550 2550 5550 2650
 Wire Wire Line
 	5550 2600 6200 2600
 Wire Wire Line
@@ -298,8 +304,12 @@ U 1 1 59C36710
 P 4150 3600
 F 0 "J2" V 4023 3780 50  0000 L CNN
 F 1 "HEADSET" V 4250 3350 50  0000 L CNN
-F 2 "" H 4150 3600 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4150 3600 50  0001 C CNN
 F 3 "" H 4150 3600 50  0001 C CNN
+F 4 "Amphenol LTW" H 4150 3600 60  0001 C CNN "Manufacturer"
+F 5 "Waterproof Circular Connector" H 4150 3600 60  0001 C CNN "Description"
+F 6 "AU-04RMMS-SC7001" H 4150 3600 60  0001 C CNN "Package ID"
+F 7 "0.00@0" H 4150 3600 60  0001 C CNN "Pricing"
 	1    4150 3600
 	0    1    1    0   
 $EndComp
@@ -309,8 +319,12 @@ U 1 1 59C369DF
 P 7800 2750
 F 0 "J3" H 7880 2742 50  0000 L CNN
 F 1 "LED1" H 7880 2651 50  0000 L CNN
-F 2 "" H 7800 2750 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7800 2750 50  0001 C CNN
 F 3 "" H 7800 2750 50  0001 C CNN
+F 4 "Switchcraft" H 7800 2750 60  0001 C CNN "Manufacturer"
+F 5 "Barrel Jack" H 7800 2750 60  0001 C CNN "Description"
+F 6 "712AH" H 7800 2750 60  0001 C CNN "Package ID"
+F 7 "0.00@0" H 7800 2750 60  0001 C CNN "Pricing"
 	1    7800 2750
 	1    0    0    -1  
 $EndComp
@@ -320,9 +334,37 @@ U 1 1 59C36A25
 P 7800 3300
 F 0 "J4" H 7880 3292 50  0000 L CNN
 F 1 "LED2" H 7880 3201 50  0000 L CNN
-F 2 "" H 7800 3300 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7800 3300 50  0001 C CNN
 F 3 "" H 7800 3300 50  0001 C CNN
+F 4 "Switchcraft" H 7800 3300 60  0001 C CNN "Manufacturer"
+F 5 "Barrel Jack" H 7800 3300 60  0001 C CNN "Description"
+F 6 "712AH" H 7800 3300 60  0001 C CNN "Package ID"
+F 7 "0.00@0" H 7800 3300 60  0001 C CNN "Pricing"
 	1    7800 3300
 	1    0    0    -1  
 $EndComp
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 59C36FA8
+P 5650 4400
+F 0 "#FLG01" H 5650 4475 50  0001 C CNN
+F 1 "PWR_FLAG" H 5650 4574 50  0000 C CNN
+F 2 "" H 5650 4400 50  0001 C CNN
+F 3 "" H 5650 4400 50  0001 C CNN
+	1    5650 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 59C36FCC
+P 5900 2600
+F 0 "#FLG02" H 5900 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 5900 2774 50  0000 C CNN
+F 2 "" H 5900 2600 50  0001 C CNN
+F 3 "" H 5900 2600 50  0001 C CNN
+	1    5900 2600
+	1    0    0    -1  
+$EndComp
+Connection ~ 5900 2600
+Connection ~ 5650 4400
 $EndSCHEMATC
