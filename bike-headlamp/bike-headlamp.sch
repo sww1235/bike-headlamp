@@ -108,7 +108,7 @@ U 1 1 584A888C
 P 4300 4100
 F 0 "SW2" H 4380 4210 50  0000 C CNN
 F 1 "BACK" H 4300 4050 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_PTS810" H 4300 4300 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4300 4300 50  0001 C CNN
 F 3 "" H 4300 4300 50  0000 C CNN
 F 4 "125mA 125VAC; 100mA 50VDC, 500,000 Cycles at Full Load, 50mΩ Max. (Initial)" H 4300 4100 60  0001 C CNN "Characteristics"
 F 5 "E-Switch" H 4300 4100 60  0001 C CNN "Manufacturer"
@@ -138,7 +138,7 @@ U 1 1 584CC69D
 P 4300 3850
 F 0 "SW1" H 4380 3960 50  0000 C CNN
 F 1 "FRONT" H 4300 3800 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_PTS810" H 4300 4050 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4300 4050 50  0001 C CNN
 F 3 "" H 4300 4050 50  0000 C CNN
 F 4 "125mA 125VAC; 100mA 50VDC, 500,000 Cycles at Full Load, 50mΩ Max. (Initial)" H 4300 3850 60  0001 C CNN "Characteristics"
 F 5 "E-Switch" H 4300 3850 60  0001 C CNN "Manufacturer"
@@ -151,21 +151,6 @@ $EndComp
 Wire Wire Line
 	4550 3850 4450 3850
 Connection ~ 4150 4100
-$Comp
-L Conn_01x08 J1
-U 1 1 59C3506A
-P 3550 3000
-F 0 "J1" H 3470 2375 50  0000 C CNN
-F 1 "HARNESS" H 3470 2466 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3550 3000 50  0001 C CNN
-F 3 "" H 3550 3000 50  0001 C CNN
-F 4 "Amphenol LTW" H 3550 3000 60  0001 C CNN "Manufacturer"
-F 5 "Waterproof Circular Connector" H 3550 3000 60  0001 C CNN "Description"
-F 6 "BD-08RMMS-SC7001" H 3550 3000 60  0001 C CNN "Package ID"
-F 7 "0.00@0" H 3550 3000 60  0001 C CNN "Pricing"
-	1    3550 3000
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3750 2600 3950 2600
 Wire Wire Line
@@ -299,10 +284,10 @@ Wire Wire Line
 	4750 3400 4750 3950
 NoConn ~ 5650 2650
 $Comp
-L Conn_01x04 J2
+L Conn_01x04 J3
 U 1 1 59C36710
 P 4150 3600
-F 0 "J2" V 4023 3780 50  0000 L CNN
+F 0 "J3" V 4023 3780 50  0000 L CNN
 F 1 "HEADSET" V 4250 3350 50  0000 L CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4150 3600 50  0001 C CNN
 F 3 "" H 4150 3600 50  0001 C CNN
@@ -314,10 +299,10 @@ F 7 "0.00@0" H 4150 3600 60  0001 C CNN "Pricing"
 	0    1    1    0   
 $EndComp
 $Comp
-L Conn_01x02 J3
+L Conn_01x02 J4
 U 1 1 59C369DF
 P 7800 2750
-F 0 "J3" H 7880 2742 50  0000 L CNN
+F 0 "J4" H 7880 2742 50  0000 L CNN
 F 1 "LED1" H 7880 2651 50  0000 L CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7800 2750 50  0001 C CNN
 F 3 "" H 7800 2750 50  0001 C CNN
@@ -329,10 +314,10 @@ F 7 "0.00@0" H 7800 2750 60  0001 C CNN "Pricing"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x02 J4
+L Conn_01x02 J5
 U 1 1 59C36A25
 P 7800 3300
-F 0 "J4" H 7880 3292 50  0000 L CNN
+F 0 "J5" H 7880 3292 50  0000 L CNN
 F 1 "LED2" H 7880 3201 50  0000 L CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7800 3300 50  0001 C CNN
 F 3 "" H 7800 3300 50  0001 C CNN
@@ -367,4 +352,54 @@ F 3 "" H 5900 2600 50  0001 C CNN
 $EndComp
 Connection ~ 5900 2600
 Connection ~ 5650 4400
+$Comp
+L Conn_01x04 J2
+U 1 1 59C37DF9
+P 3550 3200
+F 0 "J2" V 3423 3380 50  0000 L CNN
+F 1 "HARNESS1-4" V 3650 2950 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 3550 3200 50  0001 C CNN
+F 3 "" H 3550 3200 50  0001 C CNN
+F 4 "Amphenol LTW" H 3550 3200 60  0001 C CNN "Manufacturer"
+F 5 "Waterproof Circular Connector" H 3550 3200 60  0001 C CNN "Description"
+F 6 "AU-04RMMS-SC7001" H 3550 3200 60  0001 C CNN "Package ID"
+F 7 "0.00@0" H 3550 3200 60  0001 C CNN "Pricing"
+	1    3550 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x04 J1
+U 1 1 59C37E48
+P 3550 2800
+F 0 "J1" V 3423 2980 50  0000 L CNN
+F 1 "HARNESS5-8" V 3650 2550 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 3550 2800 50  0001 C CNN
+F 3 "" H 3550 2800 50  0001 C CNN
+F 4 "Amphenol LTW" H 3550 2800 60  0001 C CNN "Manufacturer"
+F 5 "Waterproof Circular Connector" H 3550 2800 60  0001 C CNN "Description"
+F 6 "AU-04RMMS-SC7001" H 3550 2800 60  0001 C CNN "Package ID"
+F 7 "0.00@0" H 3550 2800 60  0001 C CNN "Pricing"
+	1    3550 2800
+	-1   0    0    1   
+$EndComp
+Text Label 7100 2750 0    60   ~ 0
+LED1+
+Text Label 7100 2850 0    60   ~ 0
+LED1-
+Text Label 7100 3300 0    60   ~ 0
+LED2+
+Text Label 7100 3400 0    60   ~ 0
+LED2-
+Text Label 5100 2800 0    60   ~ 0
+LED1-PWM
+Text Label 5450 3500 2    60   ~ 0
+LED2-PWM
+Text Label 4250 2800 0    60   ~ 0
+SDA
+Text Label 4250 2900 0    60   ~ 0
+SCL
+Text Label 4750 3850 0    60   ~ 0
+SW-BACK
+Text Label 4550 3750 0    60   ~ 0
+SW-FRONT
 $EndSCHEMATC
