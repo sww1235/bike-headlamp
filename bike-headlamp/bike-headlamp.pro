@@ -1,4 +1,4 @@
-update=Friday, December 09, 2016 'AMt' 03:11:38 AM
+update=Wednesday, September 20, 2017 'PMt' 09:30:46 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -74,3 +74,4 @@ LibName42=SW-Texas
 LibName43=SW-THAT-corp
 LibName44=SW-LEDdynamics
 LibName45=SW-Adafruit
+LibName46=SW-Digistump
