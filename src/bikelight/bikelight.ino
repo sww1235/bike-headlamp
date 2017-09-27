@@ -1,3 +1,5 @@
+
+
 /*
 This code takes input from two pushbuttons and i2c serial communications, and
 outputs a PWM squarewave to control two LED MINIPUCK constant current drivers.
@@ -13,14 +15,14 @@ arduino coding.
 Code borrowed from some of the tutorials at https://www.arduino.cc/en/Tutorial/HomePage
 */
 
-#include <arduino.h>
-#include <wire.h>
+#include <Arduino.h>
+#include <Wire.h>
 
-const byte frontLED 1; //digital pin 1 (PWM) - Output
-const byte backLED  4; //digital pin 4 (PWM) - Output
-const byte frontSwitch 3; //digital pin 3 - Input
-const byte backSwitch 5; //digital pin 5 - Input
-const byte slaveAddress 8;
+const byte frontLED = 1; //digital pin 1 (PWM) - Output
+const byte backLED = 4; //digital pin 4 (PWM) - Output
+const byte frontSwitch = 3; //digital pin 3 - Input
+const byte backSwitch = 5; //digital pin 5 - Input
+int slaveAddress = 8;
 //SDA = pin D0
 //SCL = pin D2
 
@@ -47,8 +49,8 @@ void setup() {
   digitalWrite(backSwitch, HIGH); //turn on internal pullup resistor
   ledOFF(frontLED);
   ledOFF(backLED);
-  wire.begin(slaveAddress);
-  wire.onReceive(receiveEvent);
+  Wire.begin();
+  Wire.onReceive(receiveEvent);
 }
 
 void loop() {
@@ -68,6 +70,9 @@ void loop() {
     if (frontReading!= frontButtonState){
       frontButtonState = frontReading;
     }
+    if (frontButtonState == LOW){ //pull up resistor enabled, pulled low when pushed
+
+    }
     if (backReading!= backButtonState){
       backButtonState = backReading;
     }
@@ -76,8 +81,8 @@ void loop() {
 }
 
 void receiveEvent(int quantity){
-  frontLEDpulse = wire.read();
-  backLEDpulse = wire.read();
+  frontLEDpulse = Wire.read();
+  backLEDpulse = Wire.read();
 }
 
 void ledOFF(int pin){
@@ -91,3 +96,4 @@ void ledON(int pin){
 void setLEDbrightness(int pin, int brightness){
   analogWrite(pin, brightness); //might need to be reversed
 }
+
