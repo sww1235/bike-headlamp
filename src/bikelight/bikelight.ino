@@ -53,6 +53,8 @@ void setup() {
   Wire.onReceive(receiveEvent);
 }
 
+// want to count button presses within a certain time.
+
 void loop() {
   //store state of switch
   int frontReading = digitalRead(frontSwitch);
@@ -71,10 +73,13 @@ void loop() {
       frontButtonState = frontReading;
     }
     if (frontButtonState == LOW){ //pull up resistor enabled, pulled low when pushed
-
+      frontButtonCounter++;
     }
     if (backReading!= backButtonState){
       backButtonState = backReading;
+    }
+    if (backButtonState == LOW){ //pull up resistor enabled, pulled low when pushed
+        backButtonCounter++;
     }
   }
 
