@@ -26,8 +26,8 @@ int slaveAddress = 8;
 //SDA = pin D0
 //SCL = pin D2
 
-int frontLEDpulse = 0;
-int backLEDpulse = 0;
+int frontLEDpulse = 0; // 0 to 255
+int backLEDpulse = 0;  // 0 to 255
 
 byte frontButtonState; //current reading for front button input pin
 byte frontLastButtonState = HIGH; //previous reading from front button input pin
@@ -85,15 +85,20 @@ void receiveEvent(int quantity){
   backLEDpulse = Wire.read();
 }
 
+// led is off at 100% aka digital HIGH, led is on at 0% aka digital LOW.
+// So the longer the pulse width ...the dimmer the light.
+// " A logic high signal(1-30Vdc) will cause the output of the Minipuck to be
+// OFF, and a logic low signal(0Vdc) will cause the output to be “on”. A PWM
+// signal (1-30Vdc) will DIM the output."
+
 void ledOFF(int pin){
-  digitalWrite(pin, HIGH); //drive pin high to turn off?
+  digitalWrite(pin, HIGH); //drive pin high to turn off
 }
 
 void ledON(int pin){
-  analogWrite(pin, 255); //100% on?
+  digitalWrite(pin, LOW); //drive pin low to turn on
 }
 
 void setLEDbrightness(int pin, int brightness){
-  analogWrite(pin, brightness); //might need to be reversed
+  analogWrite(pin, brightness); //longer off time aka lower brightness value = brighter LED
 }
-
