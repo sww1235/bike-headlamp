@@ -83,6 +83,10 @@ void loop() {
     }
   }
 
+  //save button input values
+  frontLastButtonState = frontReading;
+  backLastButtonState = backReading;
+
 }
 
 void receiveEvent(int quantity){
