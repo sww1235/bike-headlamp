@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name SW-LEDdynamics)(type Legacy)(uri ${KISWGITHUB}/SW-LEDdynamics.lib)(options "")(descr ""))
+  (lib (name SW-Texas)(type Legacy)(uri ${KISWGITHUB}/SW-Texas.lib)(options "")(descr ""))
+)
