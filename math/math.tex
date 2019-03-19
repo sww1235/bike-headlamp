@@ -11,11 +11,12 @@
 }
 
 \begin{document}
-
+\pagestyle{empty}
 Variable Reference:
 
 \begin{itemize}
 	\item $Q_{\text{CONV}} = $ Convection Heat Power
+	\item $\Delta T=$ temperature difference between heatsink surface temperature and ambient air temperature.
 	\item $b=$ Fin spacing
 	\item $d=$ diameter of inner cylinder
 	\item $D=$ outer heatsink diameter
@@ -50,5 +51,10 @@ Variable Reference:
 	R_{ab} = \frac{g \beta \Delta T b^4}{\nu a D}
 \end{dmath}
 \end{dgroup}
+
+I want to solve the above mess for the variable $\Delta T$, which appears on
+both sides of the equation. (On the right hand side, it is inside $R_{ab}$) The
+biggest problem is that $R_{ab}$ is inside fourth roots in almost all of its
+appearances except one which prevents simple factoring.
 
 \end{document}
