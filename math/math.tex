@@ -1,0 +1,54 @@
+% !TEX engine = xelatex
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[scale=0.8]{geometry}
+
+\usepackage{amsmath}
+\usepackage{breqn}
+
+\newcommand{\lnn}[1]{%
+  \ln\left(#1\right)%
+}
+
+\begin{document}
+
+Variable Reference:
+
+\begin{itemize}
+	\item $Q_{\text{CONV}} = $ Convection Heat Power
+	\item $b=$ Fin spacing
+	\item $d=$ diameter of inner cylinder
+	\item $D=$ outer heatsink diameter
+	\item $A_{cl}=\frac{\pi (D^2 — d^2)}{2} + \pi d b =$ surface area of one channel
+	\item $A_{\text{IN}}=(N_{f} —1)A_{cl}=$ inner area of heatsink
+	\item $A_{\text{OUT}}= \frac{\pi D^2}{2} + N_{f}\pi D t =$ outer surface area of heatsink ,
+	\item $A_{\text{HS}}= A_{\text{OUT}} + A_{\text{IN}} =$ Area of Heatsink
+	\item $A_{cc}=\frac{\pi D^2}{2} + \pi D L=$ Area of circumscribed cylinder
+	\item $t=$ fin thickness
+	\item $N_{f}=$ number of fins
+	\item $L=t N_{f} + (N_{f} -1)b $ Length of heatsink
+	\item $g= $ gravitational acceleration
+	\item $\beta = $ volumetric coefficient of thermal expansion
+	\item $\nu = $ kinematic viscosity
+\end{itemize}
+
+\begin{dgroup}[breakdepth={6}]
+	\begin{dmath}
+		\frac{Q_{\text{CONV}} b}{A_{\text{HS}} \Delta T K} =%
+		\left[3.36 + 0.087\frac{L}{D}\right]\sqrt{A_{cc}}\frac{b}{A_{\text{HS}}}%
+		+\frac{A_{\text{OUT}}}{A_{\text{HS}}} \left[0.499-0.026\lnn{\frac{tN_{f}}{D}}\right]R_{ab}^{1/4}%
+		+\frac{A_{\text{IN}}}{A_{\text{HS}}} \left[\left(0.573-0.184\left(\frac{d}{D}\right)%
+		+ 0.0388\left(\frac{d}{D}\right)^2 \right)^{-1}R_{ab}^{1/4}%
+		+ \left(\left(0.0323-0.0517\left(\frac{d}{D}\right)%
+		+ 0.11\left(\frac{d}{D}\right)^2\right)R_{ab}^{1/4}\\%
+		+ \left(0.0516+0.0152\left(\frac{d}{D}\right)%
+		- 0.0433\left(\frac{d}{D}\right)^2%
+		+ 0.0792\left(\frac{d}{D}\right)^3 \right)R_{ab}\right)^{-1}\right]^{-1}
+	\end{dmath}
+
+\begin{dmath}
+	R_{ab} = \frac{g \beta \Delta T b^4}{\nu a D}
+\end{dmath}
+\end{dgroup}
+
+\end{document}
